@@ -605,6 +605,46 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
+    <script>
+
+        // --- LOGIC NOTIFIKASI DROPDOWN ---
+        const notifBtn = document.getElementById('notification-btn');
+        const notifDropdown = document.getElementById('notification-dropdown');
+
+        function toggleNotification() {
+            if (notifDropdown.classList.contains('hidden')) {
+                // Buka Dropdown
+                notifDropdown.classList.remove('hidden');
+                setTimeout(() => {
+                    notifDropdown.classList.remove('opacity-0', 'scale-95');
+                    notifDropdown.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            } else {
+                // Tutup Dropdown
+                closeNotification();
+            }
+        }
+
+        function closeNotification() {
+            notifDropdown.classList.remove('opacity-100', 'scale-100');
+            notifDropdown.classList.add('opacity-0', 'scale-95');
+
+            setTimeout(() => {
+                notifDropdown.classList.add('hidden');
+            }, 200); // Sesuai durasi transisi CSS
+        }
+
+        // Tutup jika klik di luar area notifikasi
+        document.addEventListener('click', function (event) {
+            if (!notifBtn.contains(event.target) && !notifDropdown.contains(event.target)) {
+                if (!notifDropdown.classList.contains('hidden')) {
+                    closeNotification();
+                }
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
