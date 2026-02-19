@@ -108,7 +108,7 @@
                     <span>Kategori</span>
                 </a>
 
-                <a href="/component/UserLevelManagement.html"
+                <!-- <a href="/component/UserLevelManagement.html"
                     class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-gray-900 dark:hover:text-gray-100 rounded-xl transition-colors group">
                     <i class="ph ph-shield-check text-xl group-hover:scale-110 transition-transform"></i>
                     <span>User Level</span>
@@ -124,23 +124,44 @@
                     class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-gray-900 dark:hover:text-gray-100 rounded-xl transition-colors group">
                     <i class="ph ph-git-merge text-xl group-hover:scale-110 transition-transform"></i>
                     <span>Manajemen Sub Menu</span>
-                </a>
+                </a> -->
 
-                <a href="#"
-                    class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-gray-900 dark:hover:text-gray-100 rounded-xl transition-colors group">
-                    <i class="ph ph-shopping-cart text-xl group-hover:scale-110 transition-transform"></i>
-                    <span>Orders</span>
-                    <span
-                        class="ml-auto bg-red-100 text-red-600 dark:bg-red-500/20 dark:text-red-400 py-0.5 px-2 rounded-full text-xs font-bold">3</span>
-                </a>
+                <!-- <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 mt-6">System</p> -->
 
-                <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 mt-6">Settings</p>
+                <div>
+                    <button onclick="toggleSettingsMenu()"
+                        class="w-full flex items-center justify-between px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-gray-900 dark:hover:text-gray-100 rounded-xl transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <i class="ph ph-gear text-xl group-hover:rotate-90 transition-transform"></i>
+                            <span>Pengaturan</span>
+                        </div>
+                        <i id="settings-chevron" class="ph ph-caret-down text-sm transition-transform duration-300"></i>
+                    </button>
 
-                <a href="#"
-                    class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-gray-900 dark:hover:text-gray-100 rounded-xl transition-colors group">
-                    <i class="ph ph-gear text-xl group-hover:rotate-90 transition-transform"></i>
-                    <span>Preferences</span>
-                </a>
+                    <div id="settings-submenu" class="hidden overflow-hidden transition-all duration-300 mt-1 pl-4">
+                        <div class="border-l border-gray-200 dark:border-slate-700 pl-2 space-y-1">
+
+                            <a href="/component/UserLevelManagement.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-primary-500/10 rounded-lg transition-colors">
+                                <i class="ph ph-shield-check text-lg"></i>
+                                <span>User Level</span>
+                            </a>
+
+                            <a href="/component/MenuManagement.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-primary-500/10 rounded-lg transition-colors">
+                                <i class="ph ph-list-dashes text-lg"></i>
+                                <span>Manajemen Menu</span>
+                            </a>
+
+                            <a href="/component/SubMenuManagement.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-primary-50/50 dark:hover:bg-primary-500/10 rounded-lg transition-colors">
+                                <i class="ph ph-git-merge text-lg"></i>
+                                <span>Manajemen Sub Menu</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -291,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     <div
                         class="lg:col-span-2 bg-white dark:bg-dark-card p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border">
@@ -388,35 +409,13 @@
                         </button>
                     </div>
 
-                </div>
+                </div> -->
 
-                <footer
-                    class="mt-auto px-6 py-5 border-t border-gray-200 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 bg-transparent">
-
-                    <div class="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left">
-                        &copy; 2026 <span
-                            class="font-semibold text-gray-900 dark:text-white tracking-wide">Pengenumroh.com</span>.
-                        All
-                        rights reserved.
-                    </div>
-
-                    <div
-                        class="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 text-sm text-gray-500 dark:text-gray-400">
-
-                        <span class="flex items-center gap-1.5">
-                            Powered by <span class="font-medium text-gray-700 dark:text-gray-300">IT Dept</span>
-                        </span>
-
-                        <div
-                            class="flex items-center gap-4 sm:border-l sm:border-gray-300 dark:sm:border-slate-700 sm:pl-5">
-                            <a href="#"
-                                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Support
-                                Desk</a>
-                            <span
-                                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">Version
-                                1.0.0</span>
-                        </div>
-
+                <footer class="mt-auto px-6 pt-6 border-t border-gray-300 dark:border-dark-border transition-colors">
+                    <div class="text-sm text-gray-500 dark:text-gray-400 text-center">
+                        &copy; <span id="currentYear"></span> <span
+                            class="font-semibold text-gray-900 dark:text-white">pengenumroh.com</span>. All rights
+                        reserved.
                     </div>
                 </footer>
 
@@ -560,6 +559,30 @@
         // Tutup modal jika klik di luar area panel (di backdrop)
         logoutBackdrop.addEventListener('click', closeLogoutModal);
 
+    </script>
+
+    <script>
+        // --- LOGIC UNTUK DROPDOWN MENU SETTINGS ---
+        function toggleSettingsMenu() {
+            const submenu = document.getElementById('settings-submenu');
+            const chevron = document.getElementById('settings-chevron');
+
+            // Toggle class 'hidden' untuk memunculkan/menyembunyikan menu
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                // Putar ikon panah ke atas
+                chevron.classList.add('rotate-180');
+            } else {
+                submenu.classList.add('hidden');
+                // Kembalikan ikon panah ke bawah
+                chevron.classList.remove('rotate-180');
+            }
+        }
+    </script>
+
+    <script>
+        // Set tahun otomatis di footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
 </body>
